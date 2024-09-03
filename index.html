@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank for Dom</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body class="full-bg">
+    
+    <nav>
+        <div class="navbar container m-auto flex justify-around ">
+            <div class="navbar-start">
+              <a class="btn btn-ghost text-xl">AsinBank</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul id="totalwith_section" class="menu menu-horizontal px-1 text-xl font-bold gap-20">
+                <button id="btntotal"  class="btn btn-error "></button>
+                <button id="btnwith"  class="btn btn-warning "></button>
+              </ul>
+            </div>
+          </div>
+    </nav>
+
+    <main class="mt-36 h-[1000px]">
+        <div class="grid md:grid-cols-3 items-center gap-12 container m-auto" >
+            <div class="banner">
+                <img src="./image/3d-removebg-preview.png" class="w-[500px]" alt="">
+            </div>
+
+            <div class="transection_system">
+                <div class="transection_form">
+                    <h2 class="text-center text-4xl font-bold pb-20">Make a Transaction</h2>
+                    <form id="myform" class="grid grid-row-3 items-center">
+                        <div class="form-group gap-2 grid md:grid-row-2">
+                            <label class="font-bold text-xl" for="type">Type</label>
+                            <select  class="w-[400px] h-10 px-5 outline-none bg-gray-200" id="select_section" name="type" required>
+                                <option value="">Select</option>
+                                
+                            </select>
+                        </div>
+                        <div class="form-group gap-1 py-4 grid md:grid-row-2">
+                            <label class="font-bold text-xl" for="amount">Amount</label>
+                            <input class="w-[400px] h-10 px-5 outline-none bg-gray-200" type="number" id="input_section" name="amount" min="1" step="1" required>
+                        </div>
+                        <div class="md:ms-24">
+                            <button id="submit_btn"  type="submit" class="btn  w-40 btn-primary">Submit</button>
+                        </div>
+                        
+                    </form>
+                </div>
+                
+               
+            </div>
+            
+
+            <section class=" container  bg-green-300">
+                <div id="transection_table" class="overflow-x-auto">
+                    <table id="mytable" class="table">
+                      <thead>
+                        <tr>
+                          <th>Number</th>
+                          <th>Deposit</th>
+                          <th>Withdrawal</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                    
+                    </table>
+                  </div>
+            </section>
+            
+        </div>
+
+        
+    
+        
+    </main>
+
+    
+
+
+    <script type="module" src="/app.js"></script>
+</body>
+</html>
